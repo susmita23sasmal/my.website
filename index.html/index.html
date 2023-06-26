@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop Website</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,100;0,300;0,400;0,500;0,600;0,1000;1,1;1,100;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <!--header section-->
+    <header>
+
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="logo">
+        </a>
+
+        <ul class="navbar">
+            <li><a href="#">home</a></li>
+            <li><a href="#">pages</a></li>
+            <li><a href="#">shop</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+        </ul>
+
+        <div class="hi-icons">
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAf1JREFUSEvVlc8rZmEUx72UNKhZkJmkiGnIiJkxC+XHgpqkmcUoKz9mpvEPKCtWU1bYjZVMLMRCsrCwE2mS0GSaiYhXzURZTCkWZsLnq3Prvte9ct83C099Ovc+957zfe55znNuJOmOR+SO4ycFCTxCeBYu4A0cxrsQP4Fsgn2DIgu6g62JV8QroOCLUAxRE8jHbkNtPCJeAaWlCfah2lK0gC0EfYlEDsKkyyvwH+cUyIPfFkj7MW9f9R37PBGBY5wzIQNOfARWmXuViMAPnJ8ZPy3Quq1az+rhKBGBrzh/gPcwZoFUojlQBcthgutd7x58ZG4ExqHVgo1iO2AAuhMVUJlqxf/gMfyFl6Dcn0E5bIYR8TtoUwRohj7otWDD2E+g8m2BFZvXgubAOfHXSthPoAyHDVtxJVab+8CCllrgaWw/DMELm9NhrIMYkaBeNMiLXRAFHbg/JvIFqyJwjz27KcBeEwkSSONltQzV/C68BadsK7hW6t7BFjSYgA7jE6/ITe06i5eX4Cno0HXChGf17lv3iV/jgdIb2K4dx4dczIByqzEJKlWnjbgFtOHqWyVwawEFSLagn7GpcA5Kl6pNaYzCqQVXF45pimH+aLk490A7pLuX7rrWhuvfoaK4GmEEHB99RSO0gXqT0qjxC15DTPriEQhYvP/0/Re4BL0RYxnfrJFkAAAAAElFTkSuQmCC"/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAeZJREFUSEvVlMkrhVEYh++NbBEiYykslGRhyNBNYkuxUDJsDCv/ipUhK2woioUdmYeSYqFIibAwlJKyIDw/navvHve796NucurpdKb3d973vOf1+2Lc/DG27/szgQ48a4EKeIdNmIF543ErvagGXXIXZmHajojtQRobpqDJJXQSSoByl/VF5nvgLrjuFIhjcgOq4Bb6YBteoQ7GIdUclIFeWId4sz5Kn2JsBOjftNcp0M94BB6gBK6sW2YzXgKFrAGurfVcxoeQBF0waQvsM1EG3TBhHfY6lFdjsAbyIsSDF8ZyVze59GrR2lfI+ARuIMNNIIcFOzxe9YrYeGzOy06IBzuMK6ETlEm/aQMcGoYFaLYFBpkYgnsoBfsRowlmseEIEqEN9C9CPFB+yws99CnUgmLppaWzSSleAMugLPts9kfTwygD9FheRXTzFWNcD6w/o38UVkCTuo0+WD6cmQNu4ZLxLcgDGa8BhfiruRU7icgTZcUFqObYIk7jin3ANi6VSNVUZUG1J5yI0/gBe+pBFeBbi1auJbIKxQ5P9BnlncKyB3rQx3DGo3kQPJNsRFSfzkHZlgnKuEZ4cjPuVUD7JKI0lCdqSgKV9IjGfyIQFJkz4Winf4508+BatDfwYiPinv8v8AEwbl4ZIr395wAAAABJRU5ErkJggg=="/></a>
+            <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPRJREFUSEtjZKAxYKSx+QzEWhACdEgmEDtBHbQXSE8F4vWEHEiMBd1AQ0pwGNQAFG/EZwkhC8KAmldCDWgG0tOg7BwgXQ1luwPpXbgsIWTBOaBGQyAuAuJ+NENAFrQA8U4g9iDXgr9AjUxALArEb9AMkQTynwHxOyAWJteC/1CNuHxKSB4jFe0HGuiAL9KIkDsAVOMIU4fuMpiLiDAHrxK4ubgsgIkTCgJ0eQz1A24BqUFFsg9GLcDIB4RSDaEgG40DQiHEQDCIHgKNkCNoDH4FD4DSirjKIn+gRCcQq5NpySWgvkog3obLAjLNxa2NUI1GsYUAfTkzGQ7YWtEAAAAASUVORK5CYII="/></a>
+            <div class="menu-icons"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/></div>
+        </div>
+       
+    </header>
+
+    <!--home section-->
+    <section class="home">
+        <div class="home-text">
+            <h1>find your own <br> happinrss</h1>
+            <p>make a bouquet and pick up a gift with <br>your wishes. deliver to any corner of the city</p>
+            <a href="#" class="btn"> pick a bouquet</a>
+        </div>
+    </section>
+
+    <!--banner section-->
+    <section class="banner">
+        <div class="banner-img">
+            <img src="7.jpg" alt="1st banner">
+        </div>
+        <div class="banner-img">
+            <img src="8.jpg" alt="2nd banner">
+        </div>
+        <div class="banner-img">
+            <img src="9.jpg" alt="3rd banner">
+        </div>
+    </section>
+
+    <!--new product-->
+    <section class="new-products">
+        <div class="center-text">
+            <h2>new arrival items</h2>
+        </div>
+       
+        <div class="new-content">
+            <div class="row">
+                <img src="1.jpg">
+                <h4>LILY</h4>
+                <h5>RS. 999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="2.jpg">
+                <h4>pink flower</h4>
+                <h5>RS. 1299</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+        
+            <div class="row">
+                <img src="3.jpg">
+                <h4>lily</h4>
+                <h5>RS. 1999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+        
+            <div class="row">
+                <img src="4.jpg">
+                <h4>bailey</h4>
+                <h5>RS. 1199</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+        
+            <div class="row">
+                <img src="5.jpg">
+                <h4>multi rose</h4>
+                <h5>RS. 1499</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+       
+            <div class="row">
+                <img src="6.jpg">
+                <h4>multi rose</h4>
+                <h5>RS. 2999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="12.jpg">
+                <h4>white rose</h4>
+                <h5>RS. 999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="13.jpg">
+                <h4>multi flower</h4>
+                <h5>RS. 2999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--banner 02 section-->
+    <section class="banner">
+        <div class="banner-img">
+            <img src="10.jpg" alt="1st banner">
+        </div>
+        <div class="banner-img">
+            <img src="11.jpg" alt="2nd banner">
+        </div>
+    </section>
+
+    <!--new 02 product-->
+    <section class="new-products">
+        <div class="center-text">
+            <h2>Top items</h2>
+        </div>
+       
+        <div class="new-content">
+            <div class="row">
+                <img src="1.jpg">
+                <h4>LILY</h4>
+                <h5>RS. 999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+        
+            <div class="row">
+                <img src="3.jpg">
+                <h4>lily</h4>
+                <h5>RS. 1999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+        
+            <div class="row">
+                <img src="5.jpg">
+                <h4>multi rose</h4>
+                <h5>RS. 1499</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+       
+            <div class="row">
+                <img src="6.jpg">
+                <h4>multi rose</h4>
+                <h5>RS. 2999</h5>
+                <div class="top">
+                    <p>HOT</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">add to cart</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--contact section-->
+    <section class="contact">
+        <div class="contact-box">
+            <h4>my accout</h4>
+            <li><a href="#">my accout</a></li>
+            <li><a href="#">checkout</a></li>
+            <li><a href="#">contact us</a></li>
+            <li><a href="#">shopping cart</a></li>
+            <li><a href="#">wistlist</a></li>
+        </div>
+
+        <div class="contact-box">
+            <h4>quick links</h4>
+            <li><a href="#">store location</a></li>
+            <li><a href="#">orders tracking</a></li>
+            <li><a href="#">size guide</a></li>
+            <li><a href="#">my account</a></li>
+            <li><a href="#">FAQs</a></li>
+        </div> 
+
+        <div class="contact-box">
+            <h4>information</h4>
+            <li><a href="#">privacy pages</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">careers</a></li>
+            <li><a href="#">delivery information</a></li>
+            <li><a href="#">terms & condition</a></li>
+        </div> 
+
+        <div class="contact-box">
+            <h4>customer service</h4>
+            <li><a href="#">shipping policy</a></li>
+            <li><a href="#">return & refund</a></li>
+            <li><a href="#">online shopping</a></li>
+            <li><a href="#">online store</a></li>
+            <li><a href="#">terms & conditions</a></li>
+        </div>
+
+        <div class="contact-box">
+            <h4>lili</h4>
+            <h5>contact with us</h5>
+            <div class="social">
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAN9JREFUSEtjZKAxYKSx+Qx0t2A/0EcOFPrqAFC/I8wMdB/8p9BwDHMpsQDkmHtA/ARqqhGQ5oWy4eaSa8EloEEhQHwbyccngWwzaljwBWiIGhA/RwtOqlmwG2iwG9RwOyDdRO0gmgc0MBlq6AQgnY8lYVAUB8gWTAYankMtC0qBBp2Bhv1NqKEqQFoGyt4IpPkoiWR3oOZdWFwLEuIA4u9IcmQFET4LdICGX6bUAph+msXBqAXgECCmNB3ccUBMhTMX6NMUaIxPBNJ5aHljD5DvChOje5WJI6OSL0xzHwAAbG45GbPDYR0AAAAASUVORK5CYII="/></a>
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdpJREFUSEvFlU0opVEYx6+vhZSPLEazsGGSUFNY2mFHFshkbCzZSbKYpmShkCxkY2HDYCGxkuxsxAZpmposlI2ZDaGEwe+vc2/H03saN93uqV/nPc/znPM/H885b0YsxSUjxePH0iZQxsoGoAGqITSRJ3zHsAPT8NvuSFTHPheck+T23RPfD3N+PytQi3MPMpMcPB7+wEcdHMYNVmANR1sSg/8htgY6YMb1W6VuDwmc4iiNEDjDNgY/oRgqYBgULwHNet/1O6EuDwlc48gzAltuRlfGXkV7E26gED44v+LyowS07//MIH9pf4JcmIRG55fokJupMsgvOodEgvhnIOOdCZ5wAy1RdxnfMu0vsAEtnk+TzI5agYxKNb/00piHCygwvkva2prvMOL5HvnOihLQauT0i/J6NiBwjr0EvsGo6ZfYGZumupl+WaDRA1Fb9AN7N6xDq9cpeAaKsQJa0WfQYY9Dsxtom3oQlI72kG+xKSleil1BVJoq13X5Dszq9E7poD8au86rKCSgxypxSbyOWoluqH/RmszA8eYvPipDAis4OgMd32peJPBrSKAexy6857HTg3kUEpA9pc91XNj/4egxCxX/hzNFkB66VyVtv8y3Huh/41K+gmeEPlcZ7m9RlgAAAABJRU5ErkJggg=="/></a>
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYZJREFUSEvNlU0oBVEYhu/FxsLCQgmlyEaULeU3kp8osmVjhSRloSxJ2ViInZ3LypIU5Vr4WUjK1lbkJ9b+n7fOaJp7J2fuNJdTTzNz5rzf+33nm3NvPBbxiEccP5Z1gyMqagpZVRJ9qxPDW8FXyOApcf+FwRtprcM2XIGSqod+GPGp+Cfx3yq4J0APFMIiVEAeXMM8PMAWlHqMrAzeTcPruK75ZDrH/D6cmcoC9WCT1StwArNQDFNpjLqZ64Ux1zurCjoRjMIQ5JttuvFkqpiHsAAHQQ3KjLiKax9oy3bTVPDInNY8Z2JwjKgc1OxaUEPbQF9TNeTCE1TCS1CDdgSTJntpz0F7XQNJE1RGOv1LoGY7w6oHG6xehVOX8I77abiFQZiALlCv9BzIYIfV+or2XEL37ScPM3ABarR7WFUwjkLbkgNqsDLXj9graDuWoQgSUJKJQbMRNnItAJ2LS/iABhiAYZ/qrCrw0VpN/52BmtVilaP/Ip3oDud11v8yQyafKo+8gm/V7k8ZTwh10QAAAABJRU5ErkJggg=="/></a>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="end-text">
+        <p>@ late 2023 susmita sasmal. all rights reserved.</p>
+    </div>
+
+    <!--custom js link-->
+    <script src="script.js"></script>
+
+</body>
+</html>
